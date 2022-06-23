@@ -26,17 +26,17 @@ def get_completed_tasks(list_tasks):
             completed_tasks.append(task["description"])
     return completed_tasks
 
-print(get_completed_tasks(tasks))
+# print(get_completed_tasks(tasks))
 
 ## Get tasks where time_taken is at least a given time
 def get_tasks_taking_at_least(list_tasks, time):
     tasks_30_more = []
-    for time in list_tasks:
-        if time["time_taken"] >= 30:
-            tasks_30_more.append(time["description"])
+    for times in list_tasks:
+        if times["time_taken"] >= time:
+            tasks_30_more.append(times["description"])
     return tasks_30_more
 
-print(get_tasks_taking_at_least(tasks, 30))
+# print(get_tasks_taking_at_least(tasks, 30))
 
 ## Find a task with a given description
 def get_task_with_description(list_tasks, description):
@@ -46,7 +46,7 @@ def get_task_with_description(list_tasks, description):
             task_information.append(task_info)
     return task_information
 
-print(get_task_with_description(tasks,"Wash Dishes"))
+# print(get_task_with_description(tasks,"Wash Dishes"))
 
 # Extention (Function): 
 
