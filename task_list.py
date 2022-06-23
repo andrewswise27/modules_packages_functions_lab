@@ -9,37 +9,44 @@ tasks = [
 # Functions to complete:
 
 ## Get a list of uncompleted tasks
-def get_uncompleted_tasks(list):
+def get_uncompleted_tasks(list_tasks):
     uncompleted_tasks = []
-    for task in tasks:
+    for task in list_tasks:
         if task["completed"] == True:
             uncompleted_tasks.append(task["description"])
-    # print(uncompleted_tasks)
+    return uncompleted_tasks
 
 # get_uncompleted_tasks(tasks)
 
 ## Get a list of completed tasks
-def get_completed_tasks(list):
+def get_completed_tasks(list_tasks):
     completed_tasks = []
-    for task in tasks:
+    for task in list_tasks:
         if task["completed"] == False:
             completed_tasks.append(task["description"])
-    # print(completed_tasks)
+    return completed_tasks
 
-# get_completed_tasks(tasks)
+print(get_completed_tasks(tasks))
 
 ## Get tasks where time_taken is at least a given time
-def get_tasks_taking_at_least(list, time):
+def get_tasks_taking_at_least(list_tasks, time):
     tasks_30_more = []
-    for time in tasks:
+    for time in list_tasks:
         if time["time_taken"] >= 30:
             tasks_30_more.append(time["description"])
-#     print(tasks_30_more)
-        
-# get_tasks_taking_at_least(tasks, 30)
+    return tasks_30_more
+
+print(get_tasks_taking_at_least(tasks, 30))
+
 ## Find a task with a given description
-def get_task_with_description(list, description):
-    pass
+def get_task_with_description(list_tasks, description):
+    task_information = []
+    for task_info in list_tasks:
+        if task_info["description"] == description:
+            task_information.append(task_info)
+    return task_information
+
+print(get_task_with_description(tasks,"Wash Dishes"))
 
 # Extention (Function): 
 
